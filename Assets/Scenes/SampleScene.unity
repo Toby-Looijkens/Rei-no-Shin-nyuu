@@ -372,8 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d81cba6247b1234b9a2ccbad5e3f486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  minDistanceFromPlayer: 0
+  speed: 5
+  minDistanceFromPlayer: 5
 --- !u!50 &879419605
 Rigidbody2D:
   serializedVersion: 5
@@ -389,7 +389,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -431,7 +431,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   rotationSpeed: 1000
   deceleration: 10
   interactComponent: {fileID: 1027156887}
-  weapon: {fileID: 1193391116}
+  weaponComponent: {fileID: 2014807602}
   isPushed: 0
 --- !u!50 &1279418811
 Rigidbody2D:
@@ -1056,6 +1056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2014807603}
+  - component: {fileID: 2014807604}
   m_Layer: 0
   m_Name: WeaponComponent
   m_TagString: Untagged
@@ -1079,6 +1080,18 @@ Transform:
   - {fileID: 1193391117}
   m_Father: {fileID: 1279418814}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014807604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014807602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4470313351ff47e4f8f5cbcad87e61df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

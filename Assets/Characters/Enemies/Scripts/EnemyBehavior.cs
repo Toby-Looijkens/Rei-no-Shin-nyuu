@@ -20,11 +20,13 @@ public class EnemyBehavior : MonoBehaviour
         {
             lastPlayerLocation = Vector2.zero;
         }
+
+        transform.position = Vector2.MoveTowards(transform.position, lastPlayerLocation, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("PLayer")) 
+        if (collision.CompareTag("Player")) 
         {
             lastPlayerLocation = collision.transform.position;
         }

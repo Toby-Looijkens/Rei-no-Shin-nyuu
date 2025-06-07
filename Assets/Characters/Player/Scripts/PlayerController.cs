@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] GameObject interactComponent;
-    [SerializeField] GameObject weapon;
+    [SerializeField] GameObject weaponComponent;
 
     public bool isPushed = false;
 
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     private void OnAttack()
     {
         attackQueue++;
-        weapon.GetComponent<Bat>().Attack();
+        weaponComponent.GetComponent<WeaponComponent>().InitiateAttack();
     }
 
     private void OnMove(InputValue value)

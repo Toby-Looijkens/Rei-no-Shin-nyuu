@@ -24,11 +24,10 @@ public class WeaponComponent : MonoBehaviour
     private void UnlockLockRotation()
     {
         isAttacking = !isAttacking;
-        Debug.Log(isAttacking);
     }
 
     public void InitiateAttack()
     {
-        BroadcastMessage("Attack");
+        BroadcastMessage("QueueAttack");
     }
 }

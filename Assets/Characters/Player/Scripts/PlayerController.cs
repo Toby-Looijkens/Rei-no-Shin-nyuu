@@ -118,7 +118,6 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.tag == "NPC-Dynamic")
         {
-            Debug.Log("Test");
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce((collision.gameObject.transform.position - gameObject.transform.position).normalized * 80, ForceMode2D.Impulse);
         }
     }
